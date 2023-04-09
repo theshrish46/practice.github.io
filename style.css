@@ -34,7 +34,7 @@ main {
     transform: translateX(50px);
 } */
 
-
+/* 
 .container {
     width: 100px;
     height: 100px;
@@ -72,6 +72,63 @@ main {
     100% {
         transform: rotate(360deg);
         border-color: rgb(255, 0, 230);
-        border-radius: 10%;
+        border-radius: 10%; 
+    }
+}
+*/
+
+
+.container {
+    width: 100%;
+    height: 90vh;
+    border: 2px solid red;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0.2rem;
+}
+.box {
+    width: 9rem;
+    height: 25rem;
+    margin: 2rem;
+    border: 2px solid green;
+    box-shadow: 0.2rem 0.2rem 0.5rem black;
+    padding: 10px;
+    border-radius: 5%;
+    background-color: blue;
+    animation: col 0.2s ease-in-out 0.2s infinite alternate;
+}
+.box1 {
+    animation-delay: 0s;
+}
+.box2 {
+    animation-delay: 0.5s;
+}
+.box3 {
+    animation-delay: 0.8s;
+}
+.box4 {
+    animation-delay: 1.5s;
+}
+.box5 {
+    animation-delay: 1.7s;
+}
+.box6 {
+    animation-delay: 1.9s;
+}
+.box7 {
+    animation-delay: 2.4s;
+}
+
+
+@keyframes col {
+    from {
+        transform: translateY(60px) scaleY(1.1) rotate(3deg);
+        background-color: cyan;
+    }
+    to {
+        transform: translateY(-60px) scaleY(1.3) rotate(-6deg);
+        background-color: yellow;
     }
 }
