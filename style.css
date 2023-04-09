@@ -11,7 +11,7 @@ main {
     justify-content: center;
     align-items: center;
 }
-
+/* 
 .container {
     width: 75%;
     height: 75%;
@@ -19,10 +19,10 @@ main {
 }
 
 .container:hover {
-    /* transform: scale(1.2, 1.8); */
-    /* transform: rotate(-45deg); */
-    /* transform: rotateX('90'); */
-    /* transform: skewX(-45deg); */
+    /* transform: scale(1.2, 1.8);
+    /* transform: rotate(-45deg); 
+    /* transform: rotateX('90'); 
+    /* transform: skewX(-45deg); 
     transform: translateX(4);
     transition-property: all;
     transition-duration: 5s;
@@ -30,8 +30,48 @@ main {
     transition-timing-function: ease-in-out;
 }
 
+.container:hover {
+    transform: translateX(50px);
+} */
 
-.container > p:hover {
-    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1) all 2s;
-    transform: translateX(-25deg);
+
+.container {
+    width: 100px;
+    height: 100px;
+    border: 10px solid black;
+    animation: roll 7s linear infinite;
+    animation-direction: alternate;
+}
+
+@keyframes roll {
+    0% {
+        transform: rotate(60deg);
+        border-color: rgb(0, 225, 255);
+        border-radius: 30%;
+    }
+    20% {
+        transform: rotate(120deg);
+        border-color: rgb(53, 255, 2);
+        border-radius: 50%;
+    }
+    40% {
+        transform: rotate(180deg);
+        border-color: rgb(255, 128, 0);
+        border-radius: 100%;
+    }
+    60% {
+        transform: rotate(240deg);
+        border-color: rgb(255, 42, 0);
+        border-radius: 50%;
+    }
+    80% {
+        transform: rotate(300deg);
+        border-color: rgb(60, 0, 255);
+        border-radius: 30%;
+    }
+    100% {
+        transform: rotate(360deg);
+        border-color: rgb(255, 0, 230);
+        border-radius: 10%;
+    }
 }
